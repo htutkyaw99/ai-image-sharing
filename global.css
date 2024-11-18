@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .normal{
+        @apply 'rounded-lg bg-[#A5E902] m-5 p-5'
+    }
+    .pressed{
+        @apply 'rounded-lg bg-[#A5E902] m-5 p-5 opacity-95'
+    }
+}

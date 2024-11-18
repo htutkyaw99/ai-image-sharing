@@ -1,42 +1,36 @@
-import { View, Text, Image, TouchableOpacity } from 'react-native'
+import { View, ImageBackground, Text } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { LinearGradient } from 'expo-linear-gradient';
+import CustomButton from '@/components/CustomButton';
 
 const index = () => {
   return (
-    <SafeAreaView className='flex-1'>
-      <Image 
-          source={require('@/assets/images/welcome.png')}
-          className='w-screen h-screen absolute z-0 bg-transparent'
+    <View className='flex-1'>
+      <ImageBackground 
+        source={require('@/assets/images/welcome.png')}
+        resizeMode='cover'
+        className='flex-1'
       />
       <LinearGradient
-          colors={['rgba(85, 124, 147, 0.1)', 'rgba(0, 0, 0, 1)']}
-          className='w-screen h-screen absolute justify-end flex-1 z-10'
+        colors={['rgba(85, 124, 147, 0.1)', 'rgba(0, 0, 0, 1)']}
+        className='w-full h-full absolute flex-1'
       >
-        <View className='m-3'>
-          <Text className='text-white text-center 
-            mb-3 text-5xl font-bold'>
-            Generate{'\n'}
-            anything what's in{'\n'}
-            your mind now
-          </Text>
-          <Text className='text-center text-white/50 mb-5'>
-            An Ai which is developed to help you 
-            generate what's in your mind into stunning visual.
-          </Text>
-          <TouchableOpacity
-            activeOpacity={0.8}
-            className='bg-[#C0E205] hover:bg-[#C0E205]
-            font-bold p-5 rounded-full'  
-            onPress={() => {}}
-          >
-            <Text className='text-center font-semibold'>
-              Let's go!
+        <SafeAreaView className='flex-1 justify-end'>
+          <View className='gap-1 mb-3 '>
+            <Text className='text-5xl text-white font-bold text-center'>
+              Ben Ben
             </Text>
-          </TouchableOpacity>
-        </View>
+            <Text className='text-3xl text-white font-bold text-center'>
+              Your Ai Assistant
+            </Text>
+            <Text className='text-lg text-white/65 font-bold text-center'>
+              Transform your ideas into visual masterpieces
+            </Text>
+            <CustomButton/>
+          </View>
+        </SafeAreaView>
       </LinearGradient>
-    </SafeAreaView>
+    </View>
   )
 }
 

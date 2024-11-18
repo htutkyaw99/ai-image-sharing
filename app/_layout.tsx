@@ -4,14 +4,14 @@ import "../global.css";
 
 const RootLayout = () => {
   return (
-    // <Stack
-    //   screenOptions={{
-    //     headerShown: false,
-    //   }}
-    // >
-    //   <Stack.Screen name="index"/>
-    // </Stack>
-    <Slot/>
+    <Stack
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <Stack.Screen name="index"/>
+      <Stack.Screen name="(tabs)"/>
+    </Stack>
   );
 };
 

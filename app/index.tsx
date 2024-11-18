@@ -2,8 +2,16 @@ import { View, ImageBackground, Text } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { LinearGradient } from 'expo-linear-gradient';
 import CustomButton from '@/components/CustomButton';
+import { useRouter } from 'expo-router';
 
 const index = () => {
+
+  const router = useRouter()
+
+  const handlePress = () => {
+    router.push('/home')
+  }
+
   return (
     <View className='flex-1'>
       <ImageBackground 
@@ -26,7 +34,7 @@ const index = () => {
             <Text className='text-lg text-white/65 font-bold text-center'>
               Transform your ideas into visual masterpieces
             </Text>
-            <CustomButton/>
+            <CustomButton onPress={handlePress} />
           </View>
         </SafeAreaView>
       </LinearGradient>
